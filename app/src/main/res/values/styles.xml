@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <!-- el color de relleno, (por defecto es colorOnSurface)-->
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <!-- el hint cuando el campo está vacio y sin foco-->
+        <item name="android:textColorHint">@color/white</item>
+    </style>
+</resources>
