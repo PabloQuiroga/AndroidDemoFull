@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">DemoFull</string>
+    <string name="prefs_file">com.siar.demofull.PREFERENCES_FILE_KEY</string>
 </resources>

@@ -74,6 +74,10 @@ class AuthActivity : AppCompatActivity() {
                 }
             }
         }
+
+        binding.btnGoogle.setOnClickListener {
+
+        }
     }
 
     private fun showAlert() {

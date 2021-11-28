@@ -1,5 +1,6 @@
 package com.siar.demofull
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
@@ -7,7 +8,8 @@ import com.siar.demofull.databinding.ActivityHomeBinding
 
 
 enum class ProviderType {
-    BASIC
+    BASIC,
+    GOOGLE
 }
 
 class HomeActivity : AppCompatActivity() {
@@ -24,6 +26,12 @@ class HomeActivity : AppCompatActivity() {
         val email = bundle?.getString("email")
         val provider = bundle?.getString("provider")
         setup(email ?: "", provider ?: "")
+
+        //guardado de datos de inicio
+        val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+        prefs.putString("email", email)
+        prefs.putString("provider", provider)
+        prefs.apply()
     }
 
     private fun setup(email: String, provider: String) {
@@ -33,6 +41,11 @@ class HomeActivity : AppCompatActivity() {
         binding.providerTextView.text = provider
 
         binding.logoutBtn.setOnClickListener {
+            //borrado de datos de inicio
+            val prefs = getSharedPreferences(getString(R.string.prefs_file), Context.MODE_PRIVATE).edit()
+            prefs.clear()
+            prefs.apply()
+
             FirebaseAuth.getInstance().signOut()
             onBackPressed()
         }
