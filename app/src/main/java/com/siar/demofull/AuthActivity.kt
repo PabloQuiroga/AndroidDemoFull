@@ -126,7 +126,7 @@ class AuthActivity : AppCompatActivity() {
     private fun navigateToHome(email: String, provider: ProviderType) {
         val homeIntent = Intent(this, HomeActivity::class.java).apply {
             putExtra("email", email)
-            putExtra("provider", provider)
+            putExtra("provider", provider.name)
         }
         startActivity(homeIntent)
     }
