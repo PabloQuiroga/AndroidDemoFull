@@ -14,6 +14,7 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.messaging.FirebaseMessaging
 import com.siar.demofull.databinding.ActivityAuthBinding
 
 class AuthActivity : AppCompatActivity() {
@@ -32,6 +33,7 @@ class AuthActivity : AppCompatActivity() {
         bundle.putString("Message", "Integracion de Firebase completa")
         analitycs.logEvent("InitScreen", bundle)
 
+        notification()
         setup()
         session()
     }
@@ -40,6 +42,22 @@ class AuthActivity : AppCompatActivity() {
         super.onStart()
 
         binding.authLayout.visibility = VISIBLE
+    }
+
+    private fun notification() {
+        FirebaseMessaging.getInstance().token.addOnCompleteListener {
+            it.result?.let {
+                println("Este es el token del dispositivo: ${it}")
+            }
+        }
+        // Temas (Topics)
+        FirebaseMessaging.getInstance().subscribeToTopic("tutorial")
+
+        // Recuperar info de las notificaciones
+        val url: String? = intent.getStringExtra("url")
+        url?.let {
+            println("Ha llegado informacion en una push: $it")
+        }
     }
 
     private fun session() {
