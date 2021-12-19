@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import com.siar.demofull.databinding.ActivityHomeBinding
 
 
@@ -48,6 +49,16 @@ class HomeActivity : AppCompatActivity() {
 
             FirebaseAuth.getInstance().signOut()
             onBackPressed()
+        }
+
+        binding.btnCrash.setOnClickListener {
+            FirebaseCrashlytics.getInstance().setUserId(email) //registra datos del usuario en el crash
+            FirebaseCrashlytics.getInstance().setCustomKey("provider", provider) //envio de parametro personalizado
+
+            //enviar log de contexto
+            FirebaseCrashlytics.getInstance().log("Se ha pulsado el boton de forzar error")
+
+            throw RuntimeException("Test Crash by Pablo") // Forzado de crash
         }
     }
 }
