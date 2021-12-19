@@ -63,4 +63,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging-ktx'
     // dependencies for Crashlytics library
     implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    // dependencies for remote config firebase
+    implementation 'com.google.firebase:firebase-config-ktx'
 }

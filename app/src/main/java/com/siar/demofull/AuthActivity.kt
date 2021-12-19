@@ -14,7 +14,10 @@ import com.google.android.gms.common.api.ApiException
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.GoogleAuthProvider
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.FirebaseMessaging
+import com.google.firebase.remoteconfig.ktx.remoteConfig
+import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 import com.siar.demofull.databinding.ActivityAuthBinding
 
 class AuthActivity : AppCompatActivity() {
@@ -33,8 +36,24 @@ class AuthActivity : AppCompatActivity() {
         bundle.putString("Message", "Integracion de Firebase completa")
         analitycs.logEvent("InitScreen", bundle)
 
+        // Remote config
+        val configSettings = remoteConfigSettings {
+            minimumFetchIntervalInSeconds = 60
+        }
+        val firebaseConfig = Firebase.remoteConfig
+        firebaseConfig.setConfigSettingsAsync(configSettings)
+        firebaseConfig.setDefaultsAsync(mapOf("auth_app_title" to ""))
+        Firebase.remoteConfig.fetchAndActivate().addOnCompleteListener {
+            if (it.isSuccessful) {
+                val paramTitle = Firebase.remoteConfig.getString("auth_app_title")
+                setup(paramTitle)
+            }else{
+                setup(getString(R.string.app_title))
+            }
+        }
+
         notification()
-        setup()
+
         session()
     }
 
@@ -71,8 +90,8 @@ class AuthActivity : AppCompatActivity() {
         }
     }
 
-    private fun setup() {
-        title = "Autenticacion Firebase"
+    private fun setup(param: String) {
+        title = param
 
         validateInput()
     }
