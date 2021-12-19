@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
 }
 
 android {
@@ -57,7 +58,9 @@ dependencies {
     // dependency for the Firebase Authentication library
     implementation 'com.google.firebase:firebase-auth-ktx'
     // dependency for the Google Play services library 
-    implementation 'com.google.android.gms:play-services-auth:19.2.0'
+    implementation 'com.google.android.gms:play-services-auth:20.0.0'
     // dependencies for the Firebase Cloud Messaging
     implementation 'com.google.firebase:firebase-messaging-ktx'
+    // dependencies for Crashlytics library
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
 }
