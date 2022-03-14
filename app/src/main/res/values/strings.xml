@@ -1,5 +1,3 @@
 <resources>
     <string name="app_name">DemoFull</string>
-    <string name="prefs_file">com.siar.demofull.PREFERENCES_FILE_KEY</string>
-    <string name="app_title">Autenticacion Firebase</string>
 </resources>
