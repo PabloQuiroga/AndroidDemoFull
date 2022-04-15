@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'org.jmailen.kotlinter'
 }
 
 android {
@@ -34,6 +35,25 @@ android {
     }
     viewBinding {
         enabled = true
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError true
+        checkDependencies true
+        disable 'InvalidPackages', 'Typos', 'ParcelCreator'
+    }
+    kotlinter {
+        disabledRules = [
+                "final-newLine", "no-blank-line-before-rbrace", "comment-spacing",
+                "import-ordering", "indent"
+        ]
+    }
+    applicationVariants.all {
+        if (run_lint_checks) {
+            def lintTask = tasks["lint${name.capitalize()}"]
+            assembleProvider.get().dependsOn.add(lintTask)
+            assembleProvider.get().dependsOn.add(tasks["lintKotlin"])
+        }
     }
 }
 
