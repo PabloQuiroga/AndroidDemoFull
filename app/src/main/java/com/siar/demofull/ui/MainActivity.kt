@@ -7,9 +7,7 @@ import com.siar.demofull.BuildConfig
 import com.siar.demofull.R
 
 class MainActivity : AppCompatActivity() {
-    companion object{
-        const val TAG = "MainActivity"
-    }
+    private val TAG = this::class.java.simpleName
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
