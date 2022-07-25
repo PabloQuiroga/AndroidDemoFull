@@ -34,7 +34,7 @@ android {
         demoVersion{
             applicationIdSuffix ".demo"
             versionNameSuffix "-demo"
-            buildConfigField 'String', 'BASE_URL', '"http://localhost:8080/api"'
+            buildConfigField 'String', 'BASE_URL', '"http://localhost:8081/api"'
         }
         devVersion{
             applicationIdSuffix ".develope"
