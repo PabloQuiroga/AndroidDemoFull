@@ -22,6 +22,10 @@
         </activity>
         <activity
             android:name=".ui.MainActivity"
+            android:exported="false"
+            android:theme="@style/NoActionBar"/>
+        <activity
+            android:name=".ui.views.RegisterActivity"
             android:exported="false" />
     </application>
 
