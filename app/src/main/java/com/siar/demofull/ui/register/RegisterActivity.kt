@@ -1,4 +1,4 @@
-package com.siar.demofull.ui.views
+package com.siar.demofull.ui.register
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -4,9 +4,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoFull">
 
@@ -25,7 +25,7 @@
             android:exported="false"
             android:theme="@style/NoActionBar"/>
         <activity
-            android:name=".ui.views.RegisterActivity"
+            android:name=".ui.register.RegisterActivity"
             android:exported="false" />
     </application>
 

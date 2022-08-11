@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">DemoFull</string>
+
+    // title labels
+    <string name="register_screen">Nuevo Usuario</string>
+
+    // button labels
+    <string name="register">Registrar</string>
+
+    // input hints
+    <string name="mail">Email</string>
+    <string name="names">Nombres</string>
+    <string name="surnames">Apellidos</string>
+    <string name="insert_psw">Ingrese su contraseña</string>
+    <string name="repeat_psw">Repita su contraseña</string>
+    <string name="birthdate">Fecha de Nacimiento</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

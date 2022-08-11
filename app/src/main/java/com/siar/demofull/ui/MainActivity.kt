@@ -8,7 +8,7 @@ import android.view.View
 import com.siar.demofull.BuildConfig
 import com.siar.demofull.R
 import com.siar.demofull.databinding.ActivityMainBinding
-import com.siar.demofull.ui.views.RegisterActivity
+import com.siar.demofull.ui.register.RegisterActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
     private val TAG = this::class.java.simpleName
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun initComponents() {
         binding.btnLogin.setOnClickListener(this)
-        binding.btnLogin.setOnClickListener(this)
+        binding.btnSignup.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
