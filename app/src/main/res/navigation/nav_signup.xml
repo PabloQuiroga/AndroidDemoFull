@@ -9,5 +9,23 @@
         android:id="@+id/stepOneFragment"
         android:name="com.siar.demofull.ui.register.StepOneFragment"
         android:label="fragment_step_one"
-        tools:layout="@layout/fragment_step_one" />
+        tools:layout="@layout/fragment_step_one" >
+        <argument
+            android:name="termsAccepted"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.siar.demofull.ui.register.TermsFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_terms" >
+        <action
+            android:id="@+id/action_termsFragment_to_stepOneFragment"
+            app:destination="@id/stepOneFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_stepOneFragment_to_termsFragment"
+        app:destination="@id/termsFragment" />
 </navigation>
