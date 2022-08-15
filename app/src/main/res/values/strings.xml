@@ -3,6 +3,7 @@
 
     // title labels
     <string name="register_screen">Nuevo Usuario</string>
+    <string name="register_toolbar">Nuevo Registro</string>
 
     // button labels
     <string name="register">Registrar</string>
