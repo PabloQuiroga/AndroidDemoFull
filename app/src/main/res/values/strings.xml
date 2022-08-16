@@ -8,6 +8,9 @@
 
     // button labels
     <string name="register">Registrar</string>
+    <string name="recover">Recuperacion</string>
+    <string name="signup">Registrarse</string>
+    <string name="login">Ingresar</string>
 
     // input hints
     <string name="mail">Email</string>
@@ -26,4 +29,8 @@ Duis vestibulum, nunc eu cursus dictum, ipsum metus ornare ex, vel pharetra mass
 Morbi ac erat sit amet nisi condimentum scelerisque quis id risus. Praesent placerat cursus congue. Nullam diam felis, lacinia a bibendum ac, interdum nec velit. Integer a feugiat arcu. Fusce id congue ex, ut malesuada lacus. Maecenas vitae porta eros. Donec vel blandit est. Aliquam lorem massa, luctus euismod ipsum vitae, porta elementum massa. Nam id mi interdum ex semper imperdiet vel sit amet risus. Aliquam mattis odio non hendrerit tincidunt. In hac habitasse platea dictumst.
 In vel odio a orci sollicitudin iaculis. Mauris convallis orci ligula, sollicitudin sodales purus venenatis ut. Nulla tempor tortor orci, eu tempor odio condimentum non. Vivamus semper varius convallis. Fusce non vehicula dolor, ultricies faucibus felis. Vestibulum sit amet efficitur justo, porttitor scelerisque mi. Nam efficitur pulvinar purus, eget efficitur urna scelerisque a. Vivamus finibus, ligula vitae feugiat tempus, metus purus consectetur mauris, id commodo diam enim in metus. Vivamus augue nulla, pretium non leo a, gravida tristique elit. Duis in odio non arcu rutrum iaculis.
 Mauris eu venenatis ex, at bibendum mauris. Donec pulvinar eros id elit faucibus maximus. Suspendisse sit amet nisl magna. Morbi ultricies tempor urna. Donec imperdiet metus id velit suscipit cursus. Nam in nibh tempus, tincidunt libero vel, posuere odio. Maecenas ultricies risus et convallis faucibus.</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    
 </resources>

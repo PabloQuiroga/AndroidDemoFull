@@ -3,29 +3,54 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_signup"
-    app:startDestination="@id/stepOneFragment">
+    app:startDestination="@id/mainLoginFragment">
 
     <fragment
-        android:id="@+id/stepOneFragment"
-        android:name="com.siar.demofull.ui.register.StepOneFragment"
+        android:id="@+id/mainLoginFragment"
+        android:name="com.siar.demofull.ui.login.MainLoginFragment"
+        android:label="fragment_main_login"
+        tools:layout="@layout/fragment_main_login" >
+        <action
+            android:id="@+id/action_mainLoginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_mainLoginFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_mainLoginFragment_to_recoverFragment"
+            app:destination="@id/recoverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.siar.demofull.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.siar.demofull.ui.login.SignUpFragment"
         android:label="fragment_step_one"
         tools:layout="@layout/fragment_step_one" >
         <argument
             android:name="termsAccepted"
             app:argType="boolean"
             android:defaultValue="false" />
+        <action
+            android:id="@+id/action_signupFragment_to_termsFragment"
+            app:destination="@id/termsFragment" />
     </fragment>
     <fragment
         android:id="@+id/termsFragment"
-        android:name="com.siar.demofull.ui.register.TermsFragment"
+        android:name="com.siar.demofull.ui.login.TermsFragment"
         android:label="fragment_terms"
         tools:layout="@layout/fragment_terms" >
         <action
-            android:id="@+id/action_termsFragment_to_stepOneFragment"
-            app:destination="@id/stepOneFragment" />
+            android:id="@+id/action_termsFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/recoverFragment"
+        android:name="com.siar.demofull.ui.login.RecoverFragment"
+        android:label="fragment_recover"
+        tools:layout="@layout/fragment_recover" />
 
-    <action
-        android:id="@+id/action_stepOneFragment_to_termsFragment"
-        app:destination="@id/termsFragment" />
 </navigation>

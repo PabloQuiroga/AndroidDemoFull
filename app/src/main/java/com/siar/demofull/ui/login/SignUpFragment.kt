@@ -1,4 +1,4 @@
-package com.siar.demofull.ui.register
+package com.siar.demofull.ui.login
 
 import android.os.Bundle
 import android.util.Log
@@ -12,9 +12,14 @@ import com.siar.demofull.R
 import com.siar.demofull.databinding.FragmentStepOneBinding
 import com.siar.demofull.ui.base.BaseFragment
 
-class StepOneFragment : BaseFragment() {
+
+class SignUpFragment : BaseFragment() {
+    private var TAG = this::class.java.simpleName
+
     private lateinit var binding: FragmentStepOneBinding
-    val args: StepOneFragmentArgs by navArgs()
+    val args: SignUpFragmentArgs by navArgs()
+
+    private var termsAccepted: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +43,6 @@ class StepOneFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        Log.e("argument", args.termsAccepted.toString())
 
         with(binding.registerToolbar){
             showAppbar(this,getString(R.string.register_toolbar), true)
@@ -47,8 +51,27 @@ class StepOneFragment : BaseFragment() {
             }
         }
 
-        binding.btnRegister.setOnClickListener {
-            findNavController().navigate(R.id.action_stepOneFragment_to_termsFragment)
+        checkData(termsAccepted)
+
+        binding.checkBox.setOnCheckedChangeListener { _, b ->
+            binding.btnRegister.isEnabled = b
         }
+
+        binding.btnRegister.setOnClickListener {
+            findNavController().navigate(R.id.action_signupFragment_to_termsFragment)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        termsAccepted = args.termsAccepted
+        binding.checkBox.isChecked = termsAccepted
+    }
+
+    private fun checkData(termsAccepted: Boolean){
+        val chkTerms = binding.checkBox.isChecked
+
+        binding.checkBox.isChecked = termsAccepted
+        binding.btnRegister.isEnabled = chkTerms
     }
 }

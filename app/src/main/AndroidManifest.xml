@@ -11,22 +11,19 @@
         android:theme="@style/Theme.DemoFull">
 
         <activity
-            android:name=".SplashActivity"
+            android:name=".ui.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.login.LoginActivity"
             android:exported="false"
-            android:theme="@style/NoActionBar"/>
-        <activity
-            android:name=".ui.register.RegisterActivity"
-            android:theme="@style/Theme.Material3.DayNight.NoActionBar"
-            android:exported="false" />
+            android:theme="@style/Theme.Material3.DayNight.NoActionBar" />
     </application>
 
 </manifest>
