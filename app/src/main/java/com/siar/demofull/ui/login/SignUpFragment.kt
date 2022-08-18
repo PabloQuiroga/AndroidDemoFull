@@ -53,9 +53,9 @@ class SignUpFragment : BaseFragment() {
 
         checkData(termsAccepted)
 
-        binding.checkBox.setOnCheckedChangeListener { _, b ->
+        /*binding.checkBox.setOnCheckedChangeListener { _, b ->
             binding.btnRegister.isEnabled = b
-        }
+        }*/
 
         binding.btnRegister.setOnClickListener {
             findNavController().navigate(R.id.action_signupFragment_to_termsFragment)
@@ -65,13 +65,13 @@ class SignUpFragment : BaseFragment() {
     override fun onResume() {
         super.onResume()
         termsAccepted = args.termsAccepted
-        binding.checkBox.isChecked = termsAccepted
+        //binding.checkBox.isChecked = termsAccepted
     }
 
     private fun checkData(termsAccepted: Boolean){
-        val chkTerms = binding.checkBox.isChecked
+        //val chkTerms = binding.checkBox.isChecked
 
-        binding.checkBox.isChecked = termsAccepted
-        binding.btnRegister.isEnabled = chkTerms
+        //binding.checkBox.isChecked = termsAccepted
+        //binding.btnRegister.isEnabled = chkTerms
     }
 }

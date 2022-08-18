@@ -1,6 +1,11 @@
 package com.siar.demofull.ui.login
 
 import android.os.Bundle
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.method.LinkMovementMethod
+import android.text.style.URLSpan
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -26,6 +31,8 @@ class MainLoginFragment : BaseFragment(), View.OnClickListener {
         binding.btnMainLogin.setOnClickListener(this)
         binding.btnMainSignup.setOnClickListener(this)
         binding.btnMainRecover.setOnClickListener(this)
+
+        binding.lblLinkTerms.movementMethod = LinkMovementMethod.getInstance()
     }
 
     override fun onClick(v: View?) {

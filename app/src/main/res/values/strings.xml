@@ -20,8 +20,8 @@
     <string name="repeat_psw">Repita su contraseña</string>
     <string name="birthdate">Fecha de Nacimiento</string>
 
-    // checkboxes
-    <string name="chk_terms">Al dar click acepta los terminos y condiciones</string>
+    // terminos y condiciones
+    <string name="link_terms">Al dar click acepta los <a href="Terminos y Condiciones">Terminos y Condiciones</a> descriptos</string>
 
     // lorem ipsum
     <string name="demo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et placerat purus, id porta risus. Vivamus vestibulum risus eu mi scelerisque consectetur. Vestibulum quis diam sagittis, cursus neque sit amet, consequat mauris. Cras quis felis ac sem gravida aliquet. Nullam est elit, congue vel velit in, facilisis pretium leo. Sed consequat, arcu a malesuada gravida, eros sem sodales enim, sed tincidunt ligula ipsum nec magna. Pellentesque dignissim, est sit amet posuere laoreet, libero sem efficitur quam, ut aliquam tortor ipsum at erat. Curabitur aliquet varius dui et tempus. Curabitur suscipit fringilla ex ut porta. Ut in erat tincidunt, tincidunt sapien sit amet, finibus justo. Proin gravida enim nec pretium posuere. Suspendisse fringilla metus velit, ut laoreet ipsum fringilla et. Proin vehicula lectus eget mauris volutpat, sagittis accumsan ante imperdiet. Integer at augue mauris. Morbi lacinia luctus ipsum malesuada mollis. Donec mauris odio, blandit id tristique ut, ullamcorper finibus sem.
@@ -29,8 +29,5 @@ Duis vestibulum, nunc eu cursus dictum, ipsum metus ornare ex, vel pharetra mass
 Morbi ac erat sit amet nisi condimentum scelerisque quis id risus. Praesent placerat cursus congue. Nullam diam felis, lacinia a bibendum ac, interdum nec velit. Integer a feugiat arcu. Fusce id congue ex, ut malesuada lacus. Maecenas vitae porta eros. Donec vel blandit est. Aliquam lorem massa, luctus euismod ipsum vitae, porta elementum massa. Nam id mi interdum ex semper imperdiet vel sit amet risus. Aliquam mattis odio non hendrerit tincidunt. In hac habitasse platea dictumst.
 In vel odio a orci sollicitudin iaculis. Mauris convallis orci ligula, sollicitudin sodales purus venenatis ut. Nulla tempor tortor orci, eu tempor odio condimentum non. Vivamus semper varius convallis. Fusce non vehicula dolor, ultricies faucibus felis. Vestibulum sit amet efficitur justo, porttitor scelerisque mi. Nam efficitur pulvinar purus, eget efficitur urna scelerisque a. Vivamus finibus, ligula vitae feugiat tempus, metus purus consectetur mauris, id commodo diam enim in metus. Vivamus augue nulla, pretium non leo a, gravida tristique elit. Duis in odio non arcu rutrum iaculis.
 Mauris eu venenatis ex, at bibendum mauris. Donec pulvinar eros id elit faucibus maximus. Suspendisse sit amet nisl magna. Morbi ultricies tempor urna. Donec imperdiet metus id velit suscipit cursus. Nam in nibh tempus, tincidunt libero vel, posuere odio. Maecenas ultricies risus et convallis faucibus.</string>
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
-    
 </resources>
